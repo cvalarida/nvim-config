@@ -8,8 +8,24 @@ local M = {
     -- LSP Support
     {'neovim/nvim-lspconfig'},
     -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
+    {
+      'hrsh7th/nvim-cmp',
+      config = function ()
+        local cmp = require("cmp")
+        cmp.setup {
+          mapping = cmp.mapping.preset.insert({
+            ['<CR>'] = function(fallback)
+              if cmp.visible() then
+                cmp.confirm()
+              else
+                fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
+              end
+            end
+          })
+        }
+      end
+    },
+    { 'hrsh7th/cmp-nvim-lsp', },
     {'L3MON4D3/LuaSnip'},
   },
   config = function ()

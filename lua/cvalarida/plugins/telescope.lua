@@ -12,6 +12,7 @@ local M = {
         s = { builtin.live_grep, "Find string in project" },
         S = { builtin.treesitter, "Find symbol in buffer" },
         b = { builtin.buffers, "Find open buffer" },
+        r = { builtin.resume, "Resume last search" },
       }
     }, { prefix = "<leader>" })
 	end
