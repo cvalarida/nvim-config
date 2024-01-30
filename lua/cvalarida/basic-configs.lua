@@ -18,3 +18,4 @@ vim.opt.splitbelow = true
 vim.opt.mouse = "a"
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
