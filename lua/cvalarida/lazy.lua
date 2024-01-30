@@ -10,3 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+
+-- Autoload all plugins in cvalarida/plugins/*.lua
+require("lazy").setup("cvalarida.plugins")
