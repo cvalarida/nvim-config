@@ -10,6 +10,11 @@ vim.keymap.set("n", "<C-j>", function() vim.cmd.wincmd('j') end, { desc = "Move 
 vim.keymap.set("n", "<C-k>", function() vim.cmd.wincmd('k') end, { desc = "Move to up window" })
 vim.keymap.set("n", "<C-S-h>", function() vim.cmd.wincmd('H') end, { desc = "Move to up window" })
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc = "Move selection down"})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {desc = "Move selection up"})
+
+vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Paste without selection selection"})
+
 wk.register({
 				w = {
 								name = "Window",
