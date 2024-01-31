@@ -35,6 +35,6 @@ wk.register({
 				},
 				p = {
 								name = "Project",
-								v = { vim.cmd.Ex, "View files in netrw" },
+								f = { vim.cmd.Ex, "View files in netrw" },
 				}
 }, { prefix = "<leader>" })
