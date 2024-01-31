@@ -32,3 +32,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- Don't fold anything by default
+vim.opt.foldlevel = 99
