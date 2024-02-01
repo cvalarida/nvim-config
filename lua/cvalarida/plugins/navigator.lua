@@ -25,6 +25,11 @@ local M = {
         max_lines_scan_comments = 20,
         disable_filetypes = {'help', 'guihua', 'text'},
       },
+      lsp = {
+        diagnostic = {
+          underline = true,
+        }
+      },
     })
   end
 }
