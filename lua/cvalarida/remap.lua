@@ -10,10 +10,10 @@ vim.keymap.set("n", "<C-j>", function() vim.cmd.wincmd('j') end, { desc = "Move 
 vim.keymap.set("n", "<C-k>", function() vim.cmd.wincmd('k') end, { desc = "Move to up window" })
 vim.keymap.set("n", "<C-S-h>", function() vim.cmd.wincmd('H') end, { desc = "Move to up window" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc = "Move selection down"})
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {desc = "Move selection up"})
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
-vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Paste without selection selection"})
+vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste without selection selection" })
 
 -- May remove these if I use ray-x/navigator.lua
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -22,19 +22,22 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 wk.register({
-				w = {
-								name = "Window",
-								['/'] = { vim.cmd.vsplit, "Split vertically" },
-								['-'] = { vim.cmd.split, "Split vertically" },
-								['='] = { function() vim.cmd.wincmd('=') end, "Equalize the windows" },
-								H = { function() vim.cmd.wincmd('H') end, "Move window to the far left" },
-								L = { function() vim.cmd.wincmd('L') end, "Move window to the far right" },
-								-- TODO: Figure out how to not take the entire width of the screen with these
-								J = { function() vim.cmd.wincmd('J') end, "Move window to the very bottom" },
-								K = { function() vim.cmd.wincmd('K') end, "Move window to the very top" },
-				},
-				p = {
-								name = "Project",
-								f = { vim.cmd.Ex, "View files in netrw" },
-				}
+  w = {
+    name = "Window",
+    ['/'] = { vim.cmd.vsplit, "Split vertically" },
+    ['-'] = { vim.cmd.split, "Split vertically" },
+    ['='] = { function() vim.cmd.wincmd('=') end, "Equalize the windows" },
+    H = { function() vim.cmd.wincmd('H') end, "Move window to the far left" },
+    L = { function() vim.cmd.wincmd('L') end, "Move window to the far right" },
+    -- TODO: Figure out how to not take the entire width of the screen with these
+    J = { function() vim.cmd.wincmd('J') end, "Move window to the very bottom" },
+    K = { function() vim.cmd.wincmd('K') end, "Move window to the very top" },
+  },
+  p = {
+    name = "Project",
+    f = { vim.cmd.Ex, "View files in netrw" },
+  },
+  c = {
+    p = { ":let @+ = expand('%')<CR>", "[C]opy relative [P]ath to file" }
+  }
 }, { prefix = "<leader>" })
