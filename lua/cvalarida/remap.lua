@@ -49,5 +49,7 @@ wk.register({
   --   c = { vim.cmd.tabclose, "Close tab" },
   --   o = { vim.cmd.tabonly, "Close other tabs" },
   -- },
+  t = {
+    name = "Toggle"
   }
 }, { prefix = "<leader>" })
