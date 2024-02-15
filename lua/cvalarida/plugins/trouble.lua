@@ -11,9 +11,9 @@ local M = {
     local trouble = require('trouble')
 
     wk.register({
-      t = {
-        name = "Trouble (diagnostics)",
-        t = { trouble.toggle, "[T]oggle Trouble" },
+      d = {
+        name = "Diagnostics",
+        t = { trouble.toggle, "Toggle [T]rouble" },
         w = { function() require("trouble").toggle("workspace_diagnostics") end, "[W]orkspace diagnostics" },
         d = { function() require("trouble").toggle("document_diagnostics") end, "[D]ocument diagnostics" },
         q = { function() require("trouble").toggle("quickfix") end, "Toggle [Q]uickfix" },
