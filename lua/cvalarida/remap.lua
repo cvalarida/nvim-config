@@ -21,6 +21,9 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+vim.keymap.set('n', '[t', vim.cmd.tabprev, { desc = "Previous tab" })
+vim.keymap.set('n', ']t', vim.cmd.tabnext, { desc = "Next tab" })
+
 wk.register({
   w = {
     name = "Window",
@@ -39,5 +42,16 @@ wk.register({
   },
   c = {
     p = { ":let @+ = expand('%')<CR>", "[C]opy relative [P]ath to file" }
+  },
+  -- Not sure I want these, actually...
+  -- t = {
+  --   name = "Tabs",
+  --   N = { vim.cmd.tabnew, "New tab" },
+  --   t = { function() vim.cmd.tabedit('%') end, "Edit current file in a new tab" },
+  --   n = { vim.cmd.tabnext, "Next tab" },
+  --   p = { vim.cmd.tabprev, "Previous tab" },
+  --   c = { vim.cmd.tabclose, "Close tab" },
+  --   o = { vim.cmd.tabonly, "Close other tabs" },
+  -- },
   }
 }, { prefix = "<leader>" })
