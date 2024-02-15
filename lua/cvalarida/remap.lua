@@ -36,10 +36,6 @@ wk.register({
     J = { function() vim.cmd.wincmd('J') end, "Move window to the very bottom" },
     K = { function() vim.cmd.wincmd('K') end, "Move window to the very top" },
   },
-  p = {
-    name = "Project",
-    f = { vim.cmd.Ex, "View files in netrw" },
-  },
   c = {
     p = { ":let @+ = expand('%')<CR>", "[C]opy relative [P]ath to file" }
   },
