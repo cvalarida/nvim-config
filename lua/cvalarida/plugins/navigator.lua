@@ -13,7 +13,7 @@ local M = {
       end,
     }
   },
-  config = function ()
+  config = function()
     require("navigator").setup({
       mason = true,
       treesitter_analysis = true,
@@ -23,9 +23,11 @@ local M = {
       ts_fold = {
         enable = true,
         max_lines_scan_comments = 20,
-        disable_filetypes = {'help', 'guihua', 'text'},
+        disable_filetypes = { 'help', 'guihua', 'text' },
       },
       lsp = {
+        -- Set up formatting elsewhere (see none-ls.lua)
+        format_on_save = false,
         diagnostic = {
           underline = true,
         }
