@@ -26,7 +26,7 @@ local M = {
         disable_filetypes = { 'help', 'guihua', 'text' },
       },
       lsp = {
-        -- Set up formatting elsewhere (see none-ls.lua)
+        -- Set up formatting elsewhere (see conform.lua)
         format_on_save = false,
         diagnostic = {
           underline = true,
