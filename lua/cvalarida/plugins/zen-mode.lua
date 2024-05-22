@@ -1,3 +1,5 @@
+-- I may change this to https://github.com/pocco81/true-zen.nvim for the other
+-- modes. (Mostly, I think :TZNarrow would be good for screen sharing.)
 local M = {
   "folke/zen-mode.nvim",
   event = "VeryLazy",
