@@ -9,7 +9,8 @@ local M = {
       lsp_fallback = true,
       timeout_ms = 500,
     },
-    formatters_by_ft = {       javascript = js_formatters,
+    formatters_by_ft = {
+      javascript = js_formatters,
       typescript = js_formatters,
       javascriptreact = js_formatters,
       typescriptreact = js_formatters,
