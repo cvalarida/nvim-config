@@ -6,7 +6,7 @@ local M = {
 
     configs.setup({
       -- auto_install = true,
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "tsx", "html" },
+      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "svelte", "typescript", "tsx", "html" },
       sync_install = false,
       highlight = { enable = true },
       indent = { enable = true },
